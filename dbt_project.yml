@@ -40,3 +40,19 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    staging:
+      +schema: "staging"
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
+      +tags: ["marts"]
+
+
+# Add custom test paths, snapshots, etc.
+
+
+on-run-start:
+- "{{ logging.setup_run_log_table() }}"
+on-run-end:
