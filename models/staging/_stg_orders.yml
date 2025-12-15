@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staged orders data from the raw orders source table"
+
+    columns:
+      - name: order_id
+        description: "Primary key for each order"
+        
+      - name: customer_id
+        description: "Identifier of the customer who placed the order"
+
+      - name: order_date
+        description: "Date the order was placed"
+
+      - name: total_amount
+        description: "Total order amount in whole currency units"
+        

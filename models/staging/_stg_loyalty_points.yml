@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_loyalty_points
+    description: "Staged loyalty points transactions earned by customers"
+
+    columns:
+      - name: loyalty_id
+        description: "Primary key for each loyalty points transaction"
+
+      - name: customer_id
+        description: "Customer who earned the loyalty points"
+
+      - name: points_earned
+        description: "Number of loyalty points earned in the transaction"
+      
+      - name: transaction_date
+        description: "Date the loyalty points transaction occurred"
+
+      - name: source
+        description: "Source of the loyalty points (e.g., purchase, promotion)"

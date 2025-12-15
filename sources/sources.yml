@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: launchpad_db
+    description: "Crowjacket Database"
+    tables:
+      - name: customers
+      - name: loyalty_points
+      - name: orders
+      - name: order_items
+      - name: products
+
