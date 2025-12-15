@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: "Staged order line items from the raw order_items table"
+
+    columns:
+      - name: order_item_id
+        description: "Primary key for each order line item"
+
+      - name: order_id
+        description: "Order identifier (foreign key to orders)"
+
+      - name: product_id
+        description: "Product identifier (foreign key to products)"
+
+      - name: quantity
+        description: "Quantity of the product ordered"
+
+      - name: line_total
+        description: "Total price for the order line (quantity × unit price)"
