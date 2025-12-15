@@ -1,0 +1,11 @@
+version: 2
+
+
+models:
+- name: mart_orders
+  description: "Production orders mart — denormalized and cleaned for analytics"
+  columns:
+  - name: order_id
+    description: "Primary identifier for orders"
+  - name: order_ts
+    description: "Event timestamp for order creation"
