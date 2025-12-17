@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: int_customer_orders
+    description: >
+      Intermediate model that aggregates customer order behavior.
+      This model joins staged customers and orders to calculate
+      order counts and lifetime value metrics. It serves as a
+      reusable building block for downstream marts.
+
+    meta:
+      layer: intermediate
+      owner: analytics-engineering
+      grain: customer_id
+
+    columns:
+      - name: customer_id
+        description: >
+          Unique identifier for the customer. Grain of the model.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_orders
+        description: >
+          Total number of orders placed by the customer across
+          their lifetime.
+        tests:
+          - not_null
+
+      - name: lifetime_value
+        description: >
+          Total monetary value of all orders placed by the customer.
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
