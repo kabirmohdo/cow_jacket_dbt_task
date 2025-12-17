@@ -13,7 +13,7 @@ with source as (
         points_earned,
         transaction_date,
         source
-    from {{ source('launchpad_db', 'loyalty_points') }}
+    from {{ source('launchpad', 'loyalty_points') }}
 
 ),
 

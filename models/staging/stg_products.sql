@@ -12,7 +12,7 @@ with source as (
         product_name,
         category,
         price
-    from {{ source('launchpad_db', 'products') }}
+    from {{ source('launchpad', 'products') }}
 
 ),
 

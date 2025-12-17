@@ -54,5 +54,5 @@ models:
 
 
 on-run-start:
-- "{{ logging.setup_run_log_table() }}"
+  - "{{ setup_run_log_table() }}"
 on-run-end:
