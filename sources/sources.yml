@@ -1,8 +1,10 @@
 version: 2
 
 sources:
-  - name: launchpad_db
+  - name: launchpad
     description: "Crowjacket Database"
+    database: LAUNCHPAD_DB
+    schema: PUBLIC
     tables:
       - name: customers
       - name: loyalty_points

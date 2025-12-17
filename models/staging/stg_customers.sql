@@ -12,7 +12,7 @@ with source as (
         full_name,
         email,
         join_date
-    from {{ source('launchpad_db', 'customers') }}
+    from {{ source('launchpad', 'customers') }}
 
 ),
 

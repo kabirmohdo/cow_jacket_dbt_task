@@ -13,7 +13,7 @@ with source as (
         product_id,
         quantity,
         line_total
-    from {{ source('launchpad_db', 'order_items') }}
+    from {{ source('launchpad', 'order_items') }}
 
 ),
 
